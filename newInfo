@@ -1,1 +1,6 @@
 1. Data Attribute : start with data-
+2. Modules : no need of using multiple script tags allows import and export
+3. exteranl libraries Ecmascript same as javascript 
+4. default export, named export
+5. Only libraries with ESM version can be used without script tags ESM stands for ECMA script modules
+6. dayjs library used for dealing with dates 
