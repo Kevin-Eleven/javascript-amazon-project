@@ -3,4 +3,5 @@
 3. exteranl libraries Ecmascript same as javascript 
 4. default export, named export
 5. Only libraries with ESM version can be used without script tags ESM stands for ECMA script modules
-6. dayjs library used for dealing with dates 
+6. dayjs library used for dealing with dates.
+7. Minifiaction : compressing js code
