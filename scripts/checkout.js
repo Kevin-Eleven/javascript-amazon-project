@@ -8,7 +8,7 @@ import {hello } from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js'
 
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 
-import { deliveryOption } from '../data/deliveryOptions.js';
+import { deliveryOptions } from '../data/deliveryOptions.js';
 
 let cartSummaryHTML = '';
 
@@ -24,16 +24,16 @@ cart.forEach((cartItem)=>{
 
   const deliveryOptionId = cartItem.deliveryOptionId;
    
-  let deliveryOptions ;
-  deliveryOption.forEach((option)=>{
+  let deliveryOption ;
+  deliveryOptions.forEach((option)=>{
     if(option.id === deliveryOptionId){
-      deliveryOptions = option;
+      deliveryOption = option;
     }
   });
 
   const today = dayjs();
   const deliveryDate = today.add(
-    deliveryOptions.deliveryDays,
+    deliveryOption.deliveryDays,
     'days'
   );
   const dateString = deliveryDate.format('dddd, MMMM D');
@@ -85,7 +85,7 @@ cart.forEach((cartItem)=>{
 
 function deliveryOptionHTML(matchingProduct, cartItem){
   let html =''
-  deliveryOption.forEach((deliveryOption)=>{
+  deliveryOptions.forEach((deliveryOption)=>{
 
     const today = dayjs();
     const deliveryDate = today.add(
@@ -156,25 +156,3 @@ document.querySelectorAll('.js-update-quantity-link').forEach((link)=>{
   })
 })
 
-// hello();
-// const today = dayjs();
-
-// const deliveryDate = today.add(10,'days');
-
-// console.log(deliveryDate.format('MMMM D'));
-
-// const monthBefore = today.subtract(1,'month');
-// console.log(monthBefore.format('dddd'));
-
-// console.log(monthBefore.format("'dddd'"));
-
-
-// function isWeekend(date){
-//   let check = date.format("dddd");
-//   if(check === 'Saturday' || check === 'Sunday'){
-//     return 1;
-//   }else{
-//     return 0;
-//   }
-// }
-// console.log(isWeekend(deliveryDate));
