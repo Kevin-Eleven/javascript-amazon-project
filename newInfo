@@ -7,3 +7,4 @@
 7. Minifiaction : compressing js code
 8. Instead of targetting the dom and changing data on a webpage we can generate the page again this is called MVC (model-view-controller);
 9. MVC is a design pattern 
+10. Testing framework
