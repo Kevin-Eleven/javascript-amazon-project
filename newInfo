@@ -5,3 +5,5 @@
 5. Only libraries with ESM version can be used without script tags ESM stands for ECMA script modules
 6. dayjs library used for dealing with dates.
 7. Minifiaction : compressing js code
+8. Instead of targetting the dom and changing data on a webpage we can generate the page again this is called MVC (model-view-controller);
+9. MVC is a design pattern 
